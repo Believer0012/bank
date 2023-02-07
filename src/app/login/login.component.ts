@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   inputplaceholder="account number"
-  data="your perfect banking partner"
-  acno:any
-  passwrd:any
+  data="your perfect banking partner (◠‿◠)"
+  // acno:any
+  // passwrd:any
   userDetails:any=
   {
   1000:{acno:1000,username:"joel",password:"joel@123",balance:0},
@@ -19,20 +19,57 @@ export class LoginComponent {
   1004:{acno:1004,username:"ajay",password:"ajay@123",balance:0},
   }
   constructor() { }
-  login(){
-    alert("processing")
+  // login(){
+  //   //alert("processing")
+  //   var acnum=this.acno
+  //   var passwrd=this.passwrd 
+  //   var userDetails=this.userDetails
+  //   if(acnum in userDetails)
+  //   {
+  //     if(passwrd==userDetails[acnum]["password"])
+  //     {
+  //       alert("login sucess!!!")
+  //     }
+  //     else{
+  //       alert("incorret password")
+  //     }
+
+  //   }
+  //   else{
+  //     alert("incorrect account number")
+  //   }
+  // }
+  login(a:any,b:any){
+    //alert("processing")
+    var acnum=a.value
+    var passwrd=b.value
+    var userDetails=this.userDetails
+    if(acnum in userDetails)
+    {
+      if(passwrd==userDetails[acnum]["password"])
+      {
+        alert("login sucess!!!")
+      }
+      else{
+        alert("incorret password")
+      }
+
+    }
+    else{
+      alert("incorrect account number")
+    }
   }
-  acnoChange(event:any) 
-  {
-    this.acno=event.target.value
-    console.log(this.acno);
+//   acnoChange(event:any) 
+//   {
+//     this.acno=event.target.value
+//     //console.log(this.acno);
     
-  }
-  pswrdChange(event:any)
-  {
-    this.passwrd=event.target.value
-    console.log(this.passwrd);
+//   }
+//   pswrdChange(event:any)
+//   {
+//     this.passwrd=event.target.value
+//    //console.log(this.passwrd);
     
 
-  }
+//   }
 }
